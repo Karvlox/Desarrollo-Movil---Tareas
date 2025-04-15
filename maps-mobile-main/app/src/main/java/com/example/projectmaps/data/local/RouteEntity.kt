@@ -24,7 +24,6 @@ data class RouteEntity(
     val endTimestamp: Long?
 ) {
     fun toRoute(): Route {
-        // Convert JSON string to list of LocationPoint
         val locations = LocationConverters().fromJson(locationsJson)
 
         return Route(

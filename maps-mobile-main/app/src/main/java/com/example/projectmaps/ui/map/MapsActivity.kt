@@ -305,7 +305,6 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
         map.clear()
 
-        // Draw route line
         val polylineOptions = PolylineOptions()
         for (point in route.locations) {
             polylineOptions.add(LatLng(point.latitude, point.longitude))
@@ -314,7 +313,6 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         polylineOptions.width(12f)
         map.addPolyline(polylineOptions)
 
-        // Add start marker
         val startPoint = route.startPoint
         map.addMarker(
             MarkerOptions()
